@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Oyun Kütüphanem</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="govde">
+
+    <button id="tema-btn" onclick="temaDegistir()">🌓</button>
+    <button id="ekle-btn" onclick="panelAc()">Ekle +</button>
+    
+    <input type="text" id="arama-cubugu" placeholder="Oyun ara..." onkeyup="listele()">
+    <div id="oyun-listesi"></div>
+
+    <div id="ekle-panel" class="panel">
+        <div class="panel-icerik">
+            <span class="kapat" onclick="panelKapat()">&times;</span>
+            <h3>Yeni Oyun Ekle</h3>
+            <input type="text" id="yeni-ad" placeholder="Oyun Adı">
+            <input type="text" id="yeni-link" placeholder="Oyun Linki">
+            <input type="text" id="yeni-resim" placeholder="Fotoğraf Linki">
+            <textarea id="yeni-hikaye" placeholder="Oyun Hakkında..."></textarea>
+            <button onclick="oyunKaydet()">Kaydet</button>
+        </div>
+    </div>
+
+    <div id="detay-modal" class="modal">
+        <div class="modal-icerik">
+            <span class="kapat" onclick="modalKapat()">&times;</span>
+            <h2 id="modal-baslik"></h2>
+            <p id="modal-hikaye"></p>
+            <a id="modal-link" href="#" target="_blank" class="oyna-btn">Hemen Oyna</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
